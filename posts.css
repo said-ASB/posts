@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    max-width: 1550px; 
+    height: 14vh;
+}
+header{
+    background-color: rgb(95, 58, 226);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: block;
+
+}
+header h3{
+    color: white;
+    padding: 2px 20px;
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+.sidbar{
+    width: 200px;
+    background-color: rgb(234, 234, 236);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    margin-top: 50px;
+}
+.sidbar button{
+    margin:20px;
+    padding: 10px;
+    background-color: rgb(95, 58, 226);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.sidbar select{
+    margin:20px;
+    padding: 10px;
+    background-color: rgb(95, 58, 226);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.post{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:24px;
+    margin-left: 250px;
+    padding-top: 8rem;
+}
+.post div{
+    background-color: rgb(248, 247, 246);
+    width: 220px;
+    height: 150px;
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    box-shadow: 6px 6px 28px 1px rgb(95, 58, 226);
+
+}
+.postDiv{
+    display: flex;
+    flex-direction: column;
+    
+}
+.postDiv button{
+    position: absolute;
+  left: 100px;
+  top: 150px;
+}
