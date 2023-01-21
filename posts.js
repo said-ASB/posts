@@ -2,6 +2,7 @@ async function posts (){
     const resp = await fetch('https://jsonplaceholder.typicode.com/posts')
     let  data = await resp.json()
     localStorage.setItem("posts", JSON.stringify(data))
+    console.log(data)
 
 
 } 
@@ -20,7 +21,8 @@ let empty =[]
 
   function mapposts (elem){
    const mydata =  elem.map(e=>{
-        return `<div class="postDiv">${e.title}<a href="newpage.html"><button>See Post</button></div></a>`
+        return `<div class="postDiv">${e.title}<a href="newpage.html?id=${e.id}"><button>See Post</button></div></a>`
+      
     }).join("")
     post.innerHTML = mydata
   }
@@ -57,7 +59,9 @@ close.addEventListener('click',()=>{
 
     selectid.addEventListener("click", () => { theid() });    
     function  theid(){
+      
       const idinput = selectid.value
+      
       if(idinput === 'text'){
            mapposts(allpost)
       }else{
@@ -69,4 +73,4 @@ close.addEventListener('click',()=>{
       
        }
 
-       
+       mapposts(allpost)
