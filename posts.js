@@ -21,13 +21,25 @@ let empty =[]
 
   function mapposts (elem){
    const mydata =  elem.map(e=>{
-        return `<div class="postDiv">${e.title}<a href="newpage.html?id=${e.id}"><button>See Post</button></div></a>`
+        return `<div class="smallpost">
+                  <div class="postDiv">${e.title}</div> 
+
+                  <div class="mybtns">
+
+                  <div>
+                  <a href="newpage.html?id=${e.id}"><button >See Post</button></a>
+                  </div>
+                  <div>
+                  <button>delete</button>
+                   </div>
+                  </div>
+        
+                </div>
+        `
       
     }).join("")
     post.innerHTML = mydata
   }
-
-
 
   const allId = ()=>{
     allpost.map(x=>{

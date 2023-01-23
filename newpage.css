@@ -9,5 +9,23 @@ body{
     text-align: center;
     height: 15rem;
     background-color: rgb(216, 218, 220);
-    box-shadow: rgba(224, 70, 70, 0.2) 8px 8px 40px 24px;
+    box-shadow: rgba(107, 103, 103, 0.2) 8px 8px 40px 24px;
+}
+header{
+    z-index: 2;
+    height: 56px;
+    width: 100%;
+    letter-spacing: 1px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(98, 0, 238);
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px;
+    line-height: center;
+}
+header h3{
+    color: white;
+    padding: 2px 20px;
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 50%;
 }

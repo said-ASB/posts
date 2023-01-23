@@ -77,8 +77,10 @@ header h3{
     margin-left: 250px;
     padding-top: 8rem;
     padding-bottom: 5rem;
+
 }
-.post div{
+
+.smallpost{
     background-color: rgb(248, 247, 246);
     width: 220px;
     height: 150px;
@@ -87,36 +89,38 @@ header h3{
     text-transform: capitalize;
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px;
     padding: 10px;
+     position: relative;
 
 }
-.postDiv{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-top: 2rem;
-    
+
+
+
+.smallpost .mybtns{
+    display: grid;
+    grid-template-columns: auto auto; 
+    bottom: 1rem;
+    grid-gap:5rem;
+    position: absolute;
 }
-.postDiv button{
-    position:absolute;
-    bottom: 16px;
-    left: 70px;
+.smallpost .mybtns button{
     padding: 6px;
     cursor: pointer;
     background-color: rgb(95, 58, 226);
     color: white;
     border: none;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 6px 6px 12px 1px rgb(135, 131, 148);
     transition: 0.5s;
     border-radius:6px ;
-
 }
-.postDiv button:hover{
+
+
+.mybtns button:hover{
     background-color: rgb(226, 216, 216);
     color: black;
-}
+} 
 .modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
