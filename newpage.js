@@ -22,8 +22,11 @@ const branchpost = document.querySelector('.branchpost')
 
 
 function myposst(h){
-  branchpost.innerHTML =  `<h1>${h.title}</h1>
-  <h4>*${h.body}</h4>`
+  branchpost.innerHTML =  
+   `<div>
+   <h1>${h.title}</h1>
+  <h4>*${h.body}</h4>
+  </div>`
   
 }
 

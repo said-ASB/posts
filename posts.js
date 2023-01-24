@@ -11,9 +11,12 @@ const allpost = JSON.parse(localStorage.getItem("posts") || "[]");
   
 const post = document.querySelector(".post")
 const selectid = document.querySelector(".selectid")
+const closebtn = document.querySelector(".closebtn")
 const creat = document.querySelector(".creat")
 const close = document.querySelector(".close")
 const modal = document.querySelector(".modal")
+const deleteloc = document.querySelector(".deleteloc")
+
 
 
 let empty =[]
@@ -30,7 +33,7 @@ let empty =[]
                   <a href="newpage.html?id=${e.id}"><button >See Post</button></a>
                   </div>
                   <div>
-                  <button>delete</button>
+                  <button onclick="deleteFromLocalStoraj(${e.id})">delete</button>
                    </div>
                   </div>
         
@@ -40,6 +43,9 @@ let empty =[]
     }).join("")
     post.innerHTML = mydata
   }
+
+  
+ 
 
   const allId = ()=>{
     allpost.map(x=>{
@@ -68,6 +74,10 @@ close.addEventListener('click',()=>{
     modal.classList.add('.modal')
   }
     })
+  closebtn.addEventListener('click',()=>{
+    if(modal.classList.contains('showmodal')){
+      modal.classList.remove('showmodal') }
+  })
 
     selectid.addEventListener("click", () => { theid() });    
     function  theid(){
@@ -86,3 +96,36 @@ close.addEventListener('click',()=>{
        }
 
        mapposts(allpost)
+
+
+function deleteFromLocalStoraj(id){
+ 
+  const filterpost = allpost.findIndex((obj) => obj.id === id);
+
+  if (filterpost > -1) {
+    allpost.splice(filterpost, 1);
+  }
+localStorage.setItem("posts", JSON.stringify(allpost))
+mapposts(allpost)
+}      
+
+
+function creatPost(){
+  const inputTitle = document.querySelector(".inputTitle")
+  const inputText = document.querySelector(".inputText")
+const x = JSON.parse(localStorage.getItem("posts") || "[]");
+
+const dd = x.length+1
+
+ const typOfObj = {
+  body : inputText.value,
+  id :  dd,
+  title: inputTitle.value,
+  userId : 1
+ }
+ const newValue = [...allpost,typOfObj] 
+
+ console.log(newValue)
+ localStorage.setItem("posts", JSON.stringify(newValue))
+mapposts(newValue)
+}

@@ -1,31 +1,63 @@
-body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
 
 }
-.branchpost{
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    height: 15rem;
-    background-color: rgb(216, 218, 220);
-    box-shadow: rgba(107, 103, 103, 0.2) 8px 8px 40px 24px;
-}
 header{
-    z-index: 2;
     height: 56px;
-    width: 100%;
     letter-spacing: 1px;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: rgb(98, 0, 238);
     box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px;
-    line-height: center;
 }
 header h3{
     color: white;
-    padding: 2px 20px;
     font-size: 2rem;
-    margin: 0;
     text-transform: uppercase;
-    line-height: 50%;
+    line-height: 50px;
+    margin-left: 15px;
+}
+.sidbar{
+    background-color: rgb(248, 244, 244);
+    width: 200px;
+    border-right: 2px solid rgb(234, 234, 236) ;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px 4px;
+
+}
+.sidbar ul{
+    display: flex;
+    flex-direction: column;
+}
+.sidbar ul li{
+    list-style: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 28px;
+    padding: 34px;
+    border-bottom: rgb(213, 222, 230) 2px solid;
+    color: rgb(129, 132, 136);
+    letter-spacing: 6px;
+    cursor: pointer;
+}
+
+.branchpost{
+    text-align: center;
+    width: 700px;
+    height: 250px;
+    padding:24px ;
+    margin:50px auto ; 
+    background-color: rgb(245, 236, 236);
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px 4px;
+    text-transform: capitalize;
+}
+.branchpost h1{
+    padding-bottom: 2rem;
 }
