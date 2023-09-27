@@ -35,7 +35,7 @@ header h3{
 }
 .sidbar{
     width: 200px;
-    border-right: 2px solid rgb(234, 234, 236) ;
+    border-right: 2px solid rgb(237, 237, 243) ;
     height: 100%;
     position: fixed;
     left: 0;
@@ -67,7 +67,7 @@ header h3{
 
 }
 .sidbar select:hover{
-    background-color: rgb(226, 216, 216);
+    background-color: rgb(238, 230, 230);
     color: black;
 }
 .post{
